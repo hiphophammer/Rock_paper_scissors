@@ -26,20 +26,34 @@ function playGame(playerSelection, computerSelection) {
                 return "Rock Vs. Rock -- tie!";
             case 1: // ROCK VS PAPER
                 return "Rock Vs. Paper -- you lose!";
-            default: // 
+            default: // ROCK VS SCISSORS
                 return "Rock Vs. Scissors -- you win!";
         }
     }
     // player choice === PAPER 
     else if (playerSelection === "PAPER") {
-
+        switch(computerSelection) {
+            case 0: // PAPER VS ROCK
+                return "Paper Vs. Rock -- you win!";
+            case 1: // PAPER VS PAPER
+                return "Paper Vs. Paper -- tie!";
+            default: // PAPER VS SCISSORS
+                return "Paper Vs. Scissors -- you lose!";
+        }
     }
     // player choice === SCISSORS
     else {
-
+        switch(computerSelection) {
+            case 0: // SCISSORS VS ROCK
+                return "Scissors Vs. Rock -- you lose!";
+            case 1: // SCISSORS VS PAPER
+                return "Scissors Vs. Paper -- you win!";
+            default: // SCISSORS VS SCISSORS
+                return "Scissors Vs. Scissors -- tie!";
+        }
     }
 }
 
-const playerSelection = "rock";
+const playerSelection = "scissors";
 const computerSelection = getComputerChoice();
 console.log(playGame(playerSelection, computerSelection));
