@@ -19,8 +19,25 @@ function getComputerChoice() {
 function playGame(playerSelection, computerSelection) {
     // make user input case insensitive
     playerSelection = playerSelection.toUpperCase();
-    
-    return "";
+    // player choice === ROCK
+    if (playerSelection === "ROCK") {
+        switch(computerSelection) {
+            case 0: // ROCK VS ROCK
+                return "Rock Vs. Rock -- tie!";
+            case 1: // ROCK VS PAPER
+                return "Rock Vs. Paper -- you lose!";
+            default: // 
+                return "Rock Vs. Scissors -- you win!";
+        }
+    }
+    // player choice === PAPER 
+    else if (playerSelection === "PAPER") {
+
+    }
+    // player choice === SCISSORS
+    else {
+
+    }
 }
 
 const playerSelection = "rock";
